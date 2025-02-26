@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Здравствуйте, пользователь калькулятора Calc, это онлайн-калькулятор. Вы можете выполнять как научные,
+            так и простые вычисления</h1>
+    </header>
+    <div class="container">
+        <div class="border">
+            <h2>Простой калькулятор</h2>
+            <div class="math">
+                <span class="padding design">
+                    Нажмите <button id="btnSum" class="btn">+</button> кнопку для добавления двух чисел  
+                </span>
+                <span id="btnSubt" class="padding design">
+                    Нажмите <button class="btn">-</button> кнопку для вычитания двух чисел  
+                </span>
+                <span id="btnMult" class="padding design">
+                    Нажмите <button class="btn">*</button> кнопку для умножения двух чисел  
+                </span>
+                <span id="btnDivi" class="padding design">
+                    Нажмите <button class="btn">/</button> кнопку для деления двух чисел  
+                </span>
+                <span id="btnRound" class="padding design">
+                    Нажмите <button class="btn">RoundOff</button> кнопку для округления двух чисел  
+                </span>
+                <span id="btnCeil" class="padding design">
+                    Нажмите <button class="btn">Ceil</button>   кнопку для поиска следующего наибольшего целого
+                    значения
+                </span>
+                <span id="btnFloor" class="padding design">
+                    Нажмите <button class="btn">Floor</button>   кнопку для поиска предыдущего наибольшего целого
+                    значения
+                </span>
+                <span id="btnAbsolute" class="padding design">
+                    Нажмите <button class="btn">Absolute</button>  кнопку для поиска абсолютного значения
+                    числа
+                </span>
+                <span id="btnMax" class="padding design">
+                    Нажмите <button class="btn">Maximum</button>  кнопку для поиска наибольшего числа среди
+                    введенных чисел
+                </span>
+                <span id="btnMin" class="padding design">
+                    Нажмите <button class="btn">Minimum</button>  кнопку для поиска наименьшего числа среди
+                </span>
+                <div class="padding design result-area border" id="result1">Здесь будет показан результат выполенения операции</div>
+            </div>
+        </div>
+
+
+        <div class="border">
+            <h2>Научный калькулятор</h2>
+            <div class="math">
+                <span id="btnSin" class="padding design">
+                    Нажмите <button class="btn">Sin</button> 
+                    кнопку для поиска значения sin числа
+                </span>
+                <span id="btnCos" class="padding design">
+                    Нажмите <button class="btn">Cos</button>  кнопку для нахождения значения косинуса числа 
+                </span>
+                <span id="btnTan" class="padding design">
+                    Нажмите <button class="btn">Tan</button>  кнопку для поиска касательного значения числа  
+                </span>
+                <span id="btnSec" class="padding design">
+                    Нажмите <button class="btn">Sec</button> кнопку для поиска секущей числа  
+                </span>
+                <span id="btnCosec" class="padding design">
+                    Нажмите <button class="btn">Cosec</button>  кнопку для поиска cosec числа  
+                </span>
+                <span id="btnCot" class="padding design">
+                    Нажмите <button class="btn">Cot</button>   кнопку для поиска значения номера
+                </span>
+                <span id="btnSqrt" class="padding design">
+                    Нажмите <button class="btn">Sqrt</button>  кнопку для поиска квадратного корня из числа 
+                </span>
+                <span id="btnPow" class="padding design">
+                    Нажмите <button class="btn">Power</button>   кнопку для поиска возведения в степень числа
+                </span>
+                <span id="btnRand" class="padding design">
+                    Нажмите <button class="btn">Random</button>  кнопку для генерации случайного числа в заданном диапазоне
+                </span>
+                <span id="btnLog"  class="padding design">
+                    Нажмите <button class="btn">Log</button>   кнопку для получения логарифмического значения любого числа
+                </span>
+                <div class="padding design result-area border" id="result2">Здесь будет показан результат выполенения операции</div>
+            </div>
+        </div>
+
+        
+
+    </div>
+        
+        
+
+    <script src="script.js"></script>
+</body>
+</html>
