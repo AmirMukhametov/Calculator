@@ -22,17 +22,77 @@ let buttonSum = document.getElementById('btnSum'),
     resultTwo = document.getElementById('result2');
 
 
-//Суммирование
-buttonSum.addEventListener('click', function() {
-    alert('Это функция, которая возвращает сложение двух чисел');
-    let a = +prompt('Введите первое число', ''),
-        b = +prompt('Введите второе число', '');
-    sum(a, b)
-    function sum(a, b) {
-        let res = a + b;
-        resultOne.innerHTML = 'Сложение двух чисел ' + a + ' и ' + b + ' равно ' + res;
+//Дрочево 
+function getNumbersArray (count) {
+    let numbers = [];
+    for (let i = 0; i < count; i++) {
+        let quest = prompt('Введите число', '');
+        let number;
+        if (quest === 'string') {
+            number = Number(quest);
+            return number;
+        } else if (quest === null) {
+            return alert('Вы отменили');
+        } else if (quest == "") {
+            return alert('Вы не написали');
+        } else {
+            return console.log("Ошибка");
+        }
+        return numbers.push(number);
     }
+    console.log(numbers);
+    return numbers;
+
+}    
+
+btn.addEventListener('click', function() {
+    alert('Эта функция суммирует числа');
+    getNumbersArray(2);
+    let a = numbers[0],
+        b = numbers[1];
+    let res = a + b;
+    resultArea.innerText = 'Сумма ' + a + ' и ' + b + ' равно ' + res;
 });
+
+
+
+
+
+//Вопрос
+
+// let ques = (a, b) => {
+//     let a = +prompt('Введите первое число', ''),
+//         b = +prompt('Введите второе число', '');
+// }
+
+// buttonSum.addEventListener('click', () => {
+//     alert('Это функция, которая возвращает сложение двух чисел');
+//     let a = +prompt('Введите первое число', ''),
+//          b = +prompt('Введите второе число', '');
+
+
+//     function sum(a, b) {
+//         let res = a + b;
+//         resultOne.innerHTML = 'Сложение двух чисел ' + a + ' и ' + b + ' равно ' + res;
+//     }
+// });
+
+// //Суммирование
+// buttonSum.addEventListener('click', function() {
+//     alert('Это функция, которая возвращает сложение двух чисел');
+//     ques(a, b);
+//     if(isFinite(a) || isFinite(b)) {
+//         sum(a, b);
+//         function sum(a, b) {
+//             let res = a + b;
+//             resultOne.innerHTML = 'Сложение двух чисел ' + a + ' и ' + b + ' равно ' + res;
+//         }
+//     } else {
+//         resultOne.innerHTML = 'Невозможно посчитать';
+//     }
+    
+    
+// });
 
 //Вычитание
 buttonSubt.addEventListener('click', function() {
