@@ -26,35 +26,31 @@ let buttonSum = document.getElementById('btnSum'),
 function getNumbersArray (count) {
     let numbers = [];
     for (let i = 0; i < count; i++) {
-        let quest = prompt('Введите число', '');
-        let number;
-        if (quest === 'string') {
-            number = Number(quest);
-            return number;
-        } else if (quest === null) {
-            return alert('Вы отменили');
-        } else if (quest == "") {
-            return alert('Вы не написали');
+        let quest = prompt('Введите число', '');  
+        if (typeof quest === 'string') {
+            if(isFinite(parseInt(quest)) || isFinite(parseFloat(quest))) {
+                numbers.push(Number(quest));
+            } else if (quest == '') {
+            alert("Ошибка! Это пустая строка");
+            } else {
+            alert("Ошибка! Это строка");
+            }
+        } else if (quest == null) {
+            alert("Ошибка! Вы отменили действие");
         } else {
-            return console.log("Ошибка");
+            alert("Ошибка!!");
         }
-        return numbers.push(number);
     }
     console.log(numbers);
     return numbers;
-
 }    
 
-btn.addEventListener('click', function() {
+buttonSum.addEventListener('click', function() {
     alert('Эта функция суммирует числа');
-    getNumbersArray(2);
-    let a = numbers[0],
-        b = numbers[1];
-    let res = a + b;
-    resultArea.innerText = 'Сумма ' + a + ' и ' + b + ' равно ' + res;
+    let numbers =   getNumbersArray(2);
+    let sum = numbers[0] + numbers[1];
+    resultOne.innerText = `Сумма двух чисел ${numbers[0]} и ${numbers[1]} равно ${sum}`;
 });
-
-
 
 
 
